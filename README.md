@@ -2,7 +2,17 @@
 
 Atividade Final do curso Fundamentos de Desenvolvimento Front end com React do Bootcamp Front-end Development da iTalents.
 
-## 
+## Projeto Final do Módulo
+
+Desenvolver um projetoem React utilizando os conceitos apresentados durante o módulo.
+
+#### - No mínimo 7 componentes estilizados e funcionais
+#### - Trabalhar com propse children
+#### - Realizar integração com API com pelo menos 2 métodos HTTP (GET, POST, PUT/PATH e DELETE)
+#### - Trabalhar com Listas e formulários componentizados
+#### - Trabalhar com Estados (useEstate)
+#### - Usar o Hook useEffectpara o controle do ciclo de vida dos componentes.
+#### - Trabalhar com funções assíncronas (Promisses/Async/Await)
 
 ## Getting Started with Create React App
 
