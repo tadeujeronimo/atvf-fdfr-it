@@ -81,11 +81,11 @@ const findTaskById = async (id) => {
  * @returns {Object} - A tarefa atualizada.
  */
 const updateTaskById = async (id, updates, method = "PUT") => {
-  const updateTask = await findTaskById(id); // Verifica se a tarefa existe
+  //const updateTask = await findTaskById(id); // Verifica se a tarefa existe
   // Se a tarefa não existir, lança um erro
-  if (!updateTask) {
+  /*if (!updateTask) {
     throw new Error(`Tarefa com ID ${id} não encontrada`);
-  }
+  }*/
 
   // Realiza a requisição de atualização da tarefa
   const response = await fetch(`${API_URL}/tasks/${id}`, {
@@ -110,11 +110,11 @@ const updateTaskById = async (id, updates, method = "PUT") => {
  * @returns {response} - A resposta da requisição.
  */
 const deleteTaskById = async (id) => {
-  const updateTask = await findTaskById(id); // Verifica se a tarefa existe
+  //const updateTask = await findTaskById(id); // Verifica se a tarefa existe
   // Se a tarefa não existir, lança um erro
-  if (!updateTask) {
+  /*if (!updateTask) {
     throw new Error(`Tarefa com ID ${id} não encontrada`);
-  }
+  }*/
 
   // Realiza a requisição de remoção da tarefa
   const response = await fetch(`${API_URL}/tasks/${id}`, {
