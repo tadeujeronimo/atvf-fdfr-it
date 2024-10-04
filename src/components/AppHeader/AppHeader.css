@@ -1,0 +1,16 @@
+.App-header {
+  width: 100%;
+  text-align: center;
+  background-color: #336780;
+  color: #f0f0f0;
+  flex-shrink: 0;
+}
+
+.App-header h1,
+.App-header p {
+  margin: 0;
+}
+
+.App-header h1 {
+  font-size: x-large;
+}

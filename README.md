@@ -4,86 +4,90 @@ Atividade Final do curso Fundamentos de Desenvolvimento Front end com React do B
 
 ## Projeto Final do Módulo
 
-Desenvolver um projetoem React utilizando os conceitos apresentados durante o módulo.
+Desenvolver um projeto em React utilizando os conceitos apresentados durante o módulo.
 
-#### - No mínimo 7 componentes estilizados e funcionais
-#### - Trabalhar com propse children
-#### - Realizar integração com API com pelo menos 2 métodos HTTP (GET, POST, PUT/PATH e DELETE)
-#### - Trabalhar com Listas e formulários componentizados
-#### - Trabalhar com Estados (useEstate)
-#### - Usar o Hook useEffectpara o controle do ciclo de vida dos componentes.
-#### - Trabalhar com funções assíncronas (Promisses/Async/Await)
+- Este projeto demonstra a aplicação prática dos conceitos de React apresentados durante o módulo, incluindo a criação de componentes, gerenciamento de estado, integração com APIs e uso de hooks.
 
-## Getting Started with Create React App
+### Requisitos do Projeto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### - No mínimo 7 componentes estilizados e funcionais:
+Foram criados 8 componentes: AppFooter, AppHeader, Button, FormInput, ItensList, TaskForm, TaskList e TaskCounter.
 
-## Available Scripts
+#### - Trabalhar com props e children:
+Todos os componentes utilizam props para comunicação entre si, compartilhando dados e/ou funções. Como os conceitos de Context API e Redux não foram abordados, seu uso foi evitado. O componente TaskList foi implementado com o atributo children.
 
-In the project directory, you can run:
+#### - Realizar integração com API com pelo menos 2 métodos HTTP (GET, POST, PUT/PATCH e DELETE):
+Foi realizada a integração com json-server, permitindo o uso de todos os principais métodos HTTP (GET, POST, PUT/PATCH e DELETE).
 
-### `npm start`
+#### - Trabalhar com Listas e formulários componentizados:
+TaskList é uma listagem que utiliza o componente ItensList como children. TaskForm é um formulário composto pelos componentes FormInput e Button.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### - Trabalhar com Estados (useState):
+O componente principal da aplicação, App.js, faz uso do hook useState para controlar o estado da variável tasks.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### - Usar o Hook useEffect para o controle do ciclo de vida dos componentes:
+O componente App faz uso do hook useEffect para inicializar a listagem de tasks. O componente TaskForm controla a edição de uma task utilizando esse recurso.
 
-### `npm test`
+#### - Trabalhar com funções assíncronas (Promises/Async/Await):
+O uso de funções assíncronas foi amplamente explorado tanto no serviço taskService quanto no componente App, que consome os serviços addTask, findAllTasks, updateTaskById, deleteTaskById, deleteAllTasks, getMaxTaskId e resetTaskList.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Scripts Disponíveis
 
-### `npm run build`
+No diretório do projeto, você pode executar:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### - npm start:
+Inicia o aplicativo em modo de desenvolvimento.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### - npm build:
+Compila o aplicativo para produção na pasta build.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### - npm run json-server:
+Inicia a simulação de API da aplicação.
 
-### `npm run eject`
+## Pré-requisitos
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Node.js (versão 14 ou superior)
+- npm (versão 6 ou superior)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Instalação
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### 1. Clone o repositório:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   git clone https://github.com/seu-usuario/atvf-fdfr-it.git
+   cd atvf-fdfr-it
 
-## Learn More
+#### 2. Instale as dependências:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Configuração
 
-### Code Splitting
+#### 1. Copie o arquivo .env.example para .env:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+cp .env.example .env
 
-### Analyzing the Bundle Size
+#### 2. Abra o arquivo .env e ajuste a URL da API conforme necessário. Por exemplo:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+REACT_APP_API_URL=http://localhost:3001
 
-### Making a Progressive Web App
+## Executando o Servidor JSON
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### 1. Inicie o json-server para simular a API (back-end):
 
-### Advanced Configuration
+npm run json-server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Executando o Aplicativo React
 
-### Deployment
+#### 1. Em uma nova janela do terminal, inicie o aplicativo React (front-end):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+npm start
 
-### `npm run build` fails to minify
+#### 2. Abra o navegador e acesse http://localhost:3000 para ver o aplicativo em execução.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Créditos
+
+- Este projeto faz uso da [JSONPlaceholder](https://jsonplaceholder.typicode.com/) para simular dados de tarefas;
+- Ícones utilizados neste projeto são do [Font Awesome 6](https://fontawesome.com/) através do [cdnjs](https://cdnjs.com/).
 
 ## Licença
 

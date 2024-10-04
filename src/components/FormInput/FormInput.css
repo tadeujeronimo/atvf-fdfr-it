@@ -1,0 +1,34 @@
+.form-input {
+  display: flex;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.form-input input {
+  border: 1px solid #144055;
+  border-radius: 5px;
+}
+
+.form-input input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  min-width: 30vw;
+}
+
+.form-input input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.form-input label {
+  font-size: 1.2rem;
+  color: #144055;
+  vertical-align: middle;
+  font-weight: 600;
+}
+
+.form-input input:disabled {
+  background-color: #bfced4;
+  color: #666666;
+}

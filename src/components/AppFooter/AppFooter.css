@@ -1,0 +1,33 @@
+.App-footer {
+  width: 100%;
+  text-align: center;
+  background-color: #144055;
+  color: #f0f0f0;
+  flex-shrink: 0;
+}
+
+.App-footer p {
+  font-size: medium;
+  font-style: italic;
+  margin: 10px 0;
+}
+
+.React-logo {
+  width: 40px;
+  vertical-align: middle;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .React-logo {
+    animation: React-logo-spin infinite 5s linear;
+  }
+}
+
+@keyframes React-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

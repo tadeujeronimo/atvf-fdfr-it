@@ -1,0 +1,32 @@
+.task-list {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 65dvh;
+  min-width: 85vw;
+}
+
+.task-list ul {
+  list-style-type: none;
+  padding: 10px;
+  overflow: auto;
+  border: 1px solid #144055;
+  border-radius: 10px;
+  background-color: #d9f2ff;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-group {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .task-list {
+    height: 55vh;
+  }
+}

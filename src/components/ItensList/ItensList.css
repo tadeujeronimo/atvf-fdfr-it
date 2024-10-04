@@ -1,0 +1,21 @@
+li.task-item {
+  padding: 5px;
+  margin: 5px;
+  background-color: #e6f7ff;
+  border: 1px solid #144055;
+  border-radius: 10px;
+}
+
+li.task-item:hover {
+  background-color: #6093aa;
+  color: #e6f7ff;
+}
+
+@media (max-width: 768px) {
+  li .button-text {
+    display: none;
+  }
+  li i {
+    margin-right: 0;
+  }
+}
