@@ -165,13 +165,13 @@ function App() {
     } catch (error) {
       console.error("Erro ao limpar lista de tarefas:", error);
       // Verifica se houve erro nas respostas
-      if (error.responses) {
+      /*if (error.responses) {
         error.responses.forEach((response) => {
           console.error(
             `Erro na tarefa com status ${response.status}: ${response.statusText}`
           );
         });
-      }
+      }*/
     }
   };
 

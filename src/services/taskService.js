@@ -137,18 +137,21 @@ const deleteAllTasks = async () => {
   const tasks = await findAllTasks(); // Busca todas as tarefas
 
   // Cria um array de promessas de remoção de tarefas
-  const deletePromises = tasks.map((task) => deleteTaskById(task.id));
+  //const deletePromises = tasks.map((task) => deleteTaskById(task.id));
 
   // Realiza todas as requisições de remoção em paralelo
-  const responses = await Promise.all(deletePromises);
+  //const responses = await Promise.all(deletePromises);
+
+  // Realiza a remoção de todas as tarefas em paralelo
+  const responses = await Promise.all(tasks.map((task) => deleteTaskById(task.id)));
 
   // Verifica se alguma das respostas não está OK
-  const failedResponses = responses.filter((res) => !res.ok);
+  /*const failedResponses = responses.filter((res) => !res.ok);
   if (failedResponses.length > 0) {
     const error = new Error("Erro ao remover tarefas");
     error.responses = failedResponses;
     throw error;
-  }
+  }*/
 
   return responses; // Retorna as respostas das requisições
 };
