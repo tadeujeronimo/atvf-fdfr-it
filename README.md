@@ -89,6 +89,10 @@ npm start
 - Este projeto faz uso da [JSONPlaceholder](https://jsonplaceholder.typicode.com/) para simular dados de tarefas;
 - Ícones utilizados neste projeto são do [Font Awesome 6](https://fontawesome.com/) através do [cdnjs](https://cdnjs.com/).
 
+## Demonstração
+
+[https://atvf-fdfr-it-tadeujeronimo.vercel.app/](https://atvf-fdfr-it-tadeujeronimo.vercel.app/)
+
 ## Licença
 
 [MIT](https://choosealicense.com/licenses/mit/)
