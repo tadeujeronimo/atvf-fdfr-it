@@ -143,7 +143,11 @@ const deleteAllTasks = async () => {
   //const responses = await Promise.all(deletePromises);
 
   // Realiza a remoção de todas as tarefas em paralelo
-  const responses = await Promise.all(tasks.map((task) => deleteTaskById(task.id)));
+  const responses = [];
+  for (const task of tasks) {
+    const response = await deleteTaskById(task.id);
+    responses.push(response);
+  }
 
   // Verifica se alguma das respostas não está OK
   /*const failedResponses = responses.filter((res) => !res.ok);
