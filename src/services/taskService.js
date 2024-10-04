@@ -138,11 +138,8 @@ const deleteAllTasks = async () => {
 
   // Cria um array de promessas de remoção de tarefas
   //const deletePromises = tasks.map((task) => deleteTaskById(task.id));
-
   // Realiza todas as requisições de remoção em paralelo
   //const responses = await Promise.all(deletePromises);
-
-  // Realiza a remoção de todas as tarefas em paralelo
   const responses = [];
   for (const task of tasks) {
     const response = await deleteTaskById(task.id);
@@ -168,7 +165,12 @@ const resetTaskList = async () => {
   await deleteAllTasks(); // Limpa a lista atual de tarefas
 
   // Realiza a adição de todas as tarefas mockadas em paralelo
-  const addedTasks = await Promise.all(tasksMock.map((task) => addTask(task)));
+  //const addedTasks = await Promise.all(tasksMock.map((task) => addTask(task)));
+  const addedTasks = [];
+  for (const task of tasksMock) {
+    const addedTask = await addTask(task);
+    addedTasks.push(addedTask);
+  }
 
   return addedTasks; // Retorna as tarefas adicionadas à lista
 };
